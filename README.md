@@ -32,6 +32,4 @@ The code for all experiments is in the experiments folder, you can run the jupyt
 
 ## Result
 
-![图片1](./results/curves/acc_on_SNR_KD_Joint.png) | ![图片2](./results/curves/acc_on_SNR_KD_Rayleigh.png) | ![图片3](./results/curves/acc_on_SNR_Joint.png)
---- | ---
-![图片4](./results/curves/acc_on_SNR_ResNet.png) | ![图片5](./results/curves/acc_on_SNR_Teacher_Student.png) | ![图片6](./results/curves/Diff_SNR_Queue.png) 
+![图片1](./results/curves/results.png)
