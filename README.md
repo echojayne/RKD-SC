@@ -1,4 +1,4 @@
-# A Semantic Communication System Based on Robust Knowledge Distillation
+# Large Scale Model Enabled Semantic Communications Based on Robust Knowledge Distillation
 
 This paper proposes a semantic communication system based on robust knowledge distillation (RKD-SC) for the lightweight application of large-scale semantic coding networks. We identify the problem of degraded robustness to noise in deep joint source and channel coding (JSCC) systems that are not trained jointly and propose a channel-aware autoencoder (CAA) based on the Transformer architecture to enhance the robustness of knowledge distillation-based semantic communication systems to channel noise.
 
