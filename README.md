@@ -29,7 +29,3 @@ The code for all experiments is in the experiments folder, you can run the jupyt
 - JSCC.ipynb: the experiments of ResNet18, 
 - retrain_teacher.ipynb: fine-tune the teacher,
 - test_on_SNR.ipynb: test the model on multiple SNR levels.
-
-## Result
-
-![图片1](./results/curves/results.png)
