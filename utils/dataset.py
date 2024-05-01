@@ -25,15 +25,11 @@ def get_datasets(image_transform, batch_size, dataset_name='cifar100'):
         test_loader: torch.utils.data.DataLoader
     """
     if dataset_name == 'cifar100':
-        train_dataset = datasets.CIFAR100('/path/to/cifar100', 'train', transform=image_transform, download=False)
-        test_dataset = datasets.CIFAR100('/path/to/cifar100', 'test', transform=image_transform, download=False)
+        train_dataset = datasets.CIFAR100('/path/to/cifar100', True, transform=image_transform, download=False)
+        test_dataset = datasets.CIFAR100('/path/to/cifar100', False, transform=image_transform, download=False)
     elif dataset_name == 'cifar10':
-        train_dataset = datasets.CIFAR10('/path/to/cifar100', 'train', transform=image_transform, download=True)
-        test_dataset = datasets.CIFAR10('/path/to/cifar100', 'test', transform=image_transform, download=True)
-    elif dataset_name == 'stl10':
-        train_dataset = datasets.STL10('/path/to/stl10', 'train', transform=image_transform, download=True)
-        test_dataset = datasets.STL10('/path/to/stl10', 'test', transform=image_transform, download=True)
-        
+        train_dataset = datasets.CIFAR10('/path/to/cifar100', True, transform=image_transform, download=True)
+        test_dataset = datasets.CIFAR10('/path/to/cifar100', False, transform=image_transform, download=True)
     else:
         raise ValueError('Invalid dataset name')
     train_loader = DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
