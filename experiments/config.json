@@ -1,0 +1,31 @@
+{
+    "global":{
+        "device":"cuda:1"
+    },
+    "data":{
+        "path":"/home/ubuntu/users/dky/dataset",
+        "batch_size":100,
+        "dataset_name":"cifar100"
+    },
+    "model":{
+        "teacher_model_name":"ViT-B/32"
+    },
+    "distillation":{
+        "epochs":2,
+        "learning_rate":1e-4,
+        "model_saved_path":"/home/ubuntu/users/dky/RKDSC-github/results/distillation/"
+    },
+    "classification":{
+        "epochs":2,
+        "learning_rate":1e-4
+    },
+    "e2e_train_student":{
+        "epochs":2,
+        "learning_rate":1e-4,
+        "model_saved_path":"/home/ubuntu/users/dky/RKDSC-github/results/distillation/"
+    },
+    "joint_train":{
+        "epochs":2,
+        "model_saved_path":"/home/ubuntu/users/dky/RKDSC-github/results/joint_train/"
+    }
+}
