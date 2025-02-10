@@ -43,5 +43,5 @@ def smooth_curve_n(points, n=3):
 if __name__ == '__main__':
     # 读入LOSS
 
-    loss = np.loadtxt('/home/ubuntu/users/dky/CLIP-KD/results/curve_data/cm_train_loss.txt')
-    draw_curves(loss, '/home/ubuntu/users/dky/CLIP-KD/results/curves/loss_CT.png', False)
+    loss = np.loadtxt('txt_file_path')
+    draw_curves(loss, 'curve_saved_paths', False)

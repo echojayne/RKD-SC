@@ -44,10 +44,10 @@ if __name__ == '__main__':
     # model = GenTeacher('ViT-B/32', device)  # size of teacher model is 87,849,216
     model = GenStudent(vit_parameters, device)  # size of student model is 87,849,216
     # 加载权重
-    model.load_state_dict(torch.load('/home/ubuntu/users/dky/RKD-SC/results/KD/student_KD.pt'))
+    model.load_state_dict(torch.load('/mdoel/path'))
     BATCH_SIZE = 250
-    train_dataset = datasets.CIFAR100('/home/ubuntu/users/dky/dataset', True, transform=train_transform, download=True)
-    test_dataset = datasets.CIFAR100('/home/ubuntu/users/dky/dataset', False, transform=test_transform, download=True)
+    train_dataset = datasets.CIFAR100('/dataset/path', True, transform=train_transform, download=True)
+    test_dataset = datasets.CIFAR100('/dataset/path', False, transform=test_transform, download=True)
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=4)
     test_loader = DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=4)
     
@@ -55,6 +55,6 @@ if __name__ == '__main__':
     classifier = GenClassifier(512,100,[],device)
     classifier.weights.data = torch.from_numpy(classifier_sk.coef_.T).float()
     classifier.bias.data = torch.from_numpy(np.array([classifier_sk.intercept_])).float()
-    torch.save(classifier.state_dict(), '/home/ubuntu/users/dky/CLIP-KD-copy/results/weights/classifier_TEA.pt')
+    torch.save(classifier.state_dict(), '/model_saved/path')
 
 
